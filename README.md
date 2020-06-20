@@ -1,7 +1,9 @@
 # action-test
 
-This is a very interesting sentence.
+This is a interesting sentence.
 
-Here's anthoer sentence with a typo.
+Here's another sentence with a typo.
 
 Here is another sentence.
+
+That's very good.

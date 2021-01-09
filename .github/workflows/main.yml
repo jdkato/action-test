@@ -13,5 +13,6 @@ jobs:
         files: __onlyModified
         styles: |
           https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+        debug: true
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

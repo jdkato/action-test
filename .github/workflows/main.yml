@@ -8,7 +8,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Vale
-      uses: errata-ai/vale-action@master
+      uses: errata-ai/vale-action@api
       with:
         files: __onlyModified
         styles: |

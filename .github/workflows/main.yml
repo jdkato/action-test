@@ -1,5 +1,5 @@
 name: CI
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
   lint:
@@ -8,10 +8,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Vale
-      uses: errata-ai/vale-action@master
+      uses: errata-ai/vale-action@api
       with:
         files: __onlyModified
         styles: |
           https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+        debug: true
+        onlyAnnotateModifiedLines: true
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

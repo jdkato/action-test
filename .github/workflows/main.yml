@@ -11,5 +11,6 @@ jobs:
         with:
           fail_on_error: true
           vale_flags: "--glob='*.txt'"
+          debug: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

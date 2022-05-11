@@ -10,7 +10,7 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           fail_on_error: true
-          vale_flags: "--config='.github/.vale.ini'"
+          vale_flags: "--config=.github/.vale.ini"
           debug: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

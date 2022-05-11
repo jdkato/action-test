@@ -10,5 +10,6 @@ jobs:
       - uses: errata-ai/vale-action@reviewdog
         with:
           fail_on_error: true
+          vale_flags: "--glob='*.txt'"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

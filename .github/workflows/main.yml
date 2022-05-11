@@ -8,5 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: errata-ai/vale-action@reviewdog
+        with:
+          fail_on_error: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

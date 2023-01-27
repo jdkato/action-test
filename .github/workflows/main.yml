@@ -8,8 +8,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Vale
-        uses: errata-ai/vale-action@v2
+        uses: errata-ai/vale-action@fast
         with:
-          debug: true
+          files: docs
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

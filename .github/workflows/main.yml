@@ -1,5 +1,5 @@
-name: reviewdog
-on: [pull_request]
+name: Vale
+on: [push, pull_request]
 
 jobs:
   vale:
@@ -7,10 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: errata-ai/vale-action@reviewdog
+      - uses: errata-ai/vale-action@fast
         with:
-          fail_on_error: true
-          vale_flags: "--config=.github/.vale.ini"
-          debug: true
+          files: docs
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
